@@ -35,7 +35,8 @@
             plus</a></button>
     <button class="btn btn-warning mb-5"><a class="text-white"
             href="{{path('blog_edit', {id : article.id}) }}">modifier</a></button>
-
+    <button class="btn btn-danger mb-5"><a href="{{ path("blog_delete", {id: article.id}) }}">Delete
+            article</a></button>
     {% endfor %}
 </div>
 {% endblock %}

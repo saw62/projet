@@ -4,10 +4,13 @@
 <h1>ajouter un article</h1>
 {{form_start(form) }}
 
-{{ form_row(form) }}
-{% if art  %}
-<a class="btn btn-danger" href="{{ path("blog_delete", {id: article.id}) }}">Delete article</a>
-{% endif %}
+{{ form_row(form.Titre) }}
+{{ form_row(form.Content) }}
+{{ form_row(form.Image) }}
+
+<button type="submit" class="btn btn-primary">sauvegarder</button>
+
+
 
 {{form_end(form) }}
 
