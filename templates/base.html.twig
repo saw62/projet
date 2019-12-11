@@ -37,6 +37,20 @@
                         <font style="vertical-align: inherit;"> Creer un article </font>
                     </a>
                 </li>
+                {% if app.user %}
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ path('app_logout') }}">
+                        <font style="vertical-align: inherit;"> deconnexion </font>
+                    </a>
+                </li>
+                {% else %}
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ path('login') }}">
+                        <font style="vertical-align: inherit;"> connexion </font>
+                    </a>
+                </li>
+                {% endif %}
+
             </ul>
         </div>
     </nav>
